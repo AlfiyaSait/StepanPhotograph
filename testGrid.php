@@ -1,3 +1,9 @@
+<?php
+$a=3;
+$b=4;
+echo $a+$b;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +15,33 @@
 </head>
 <body>
 
-    <div class="myGrid">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-       
+<div class="img_box" style="display: grid; grid-template-columns:repeat(auto-fit,minmax(100px,300px)); gap: 2rem">
+               
+                    <div class="img-item" style="background: url('images/reviews/person01.jpg') center no-repeat;
+                    background-size:contain; height: 35rem">
+                    </div>    
+                    <div class="img-item" style="background: url('images/reviews/person01.jpg') center no-repeat;
+                    background-size:contain; height: 35rem">
+                    </div>
+                    <div class="img-item" style="background: url('images/reviews/person01.jpg') center no-repeat;
+                    background-size:contain; height: 35rem">
+                    </div>
+                    <div class="img-item" style="background: url('images/reviews/person01.jpg') center no-repeat;
+                    background-size:contain; height: 35rem">
+                    </div>
+                    <div class="img-item" style="background: url('images/reviews/person01.jpg') center no-repeat;
+                    background-size:contain; height: 35rem">
+                    </div>          
+
+            </div>
+
+<div class="img_box" style="display: grid; grid-template-columns:repeat(auto-fit,minmax(100px,300px)); gap: 2rem">
+     <div>1</div>
+     <div>2</div>
+     <div>3</div>
+     <div>4</div>
+     <div>5</div>
+     <div>6</div>
     </div>
 
 

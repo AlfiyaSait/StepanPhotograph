@@ -1,3 +1,5 @@
+<?php require "application/views/components/header.component.php"; ?>
+<?php require "application/views/components/nav.component.php"; ?>
 <?php
 // файл входа пользователя на сайт
 // получаем данные, проверяем по бд на соответствие
@@ -139,7 +141,7 @@ function show_form($errors = [], $input = []){
 <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<div class="main">
+<div class="main-enter">
 <form action="" method="POST">
 <h2>Вход</h2>
 
@@ -165,3 +167,6 @@ value="$input[password]">
 _HTML_;
 
 }
+
+?>
+<?php require "application/views/components/footer.component.php"; ?>

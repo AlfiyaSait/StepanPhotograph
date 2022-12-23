@@ -5,91 +5,88 @@ require 'application/models/DbConnect.php';
 $pdo = DbConnect::getConnection();
 ?>
     <main>
+    
 
-        <div class="photo-items">
-            <div> <h2>Портфолио</h2> <br> </div>
-
-            <div class="item-header"><h3> Портреты</h3><br> </div>
+        <div class="photo-items">        
+            <div class="item-header">Портреты </div>
             <?php
             $query_img = "SELECT `img_address` FROM `portraits`";
             $result_img = $pdo->query($query_img);
             //d( $result_img->fetchAll() );
             ?>
 
-            <div class="img_box" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px">
+            <div class="img_box" style="display: grid; grid-template-columns:repeat(auto-fit,minmax(100px,400px)); gap: 2rem">
 
                 <?php
                 while ( $block_img = $result_img->fetch() ) {
                     echo <<<END
-            
-                <div class="img-item">
-                     <img class="image" id="img_link" src="$block_img[img_address]" style="width: 300px; ">
-                </div>
+                   
+                    <div class="img-item" style="background: url('$block_img[img_address]') center no-repeat;
+                    background-size:cover; height: 35rem">
+                    </div>               
 END;
                 }
                 ?>
             </div>
 
 
-            <div class="item-header"><h3> Пейзаж</h3></div>
+            <div class="item-header">Пейзаж</div>
             <?php
             $query_img = "SELECT `img_address` FROM `paysage`";
             $result_img = $pdo->query($query_img);
             //d( $result_img->fetchAll() );
             ?>
 
-            <div class="img_box" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px">
+            <div class="img_box" style="display: grid; grid-template-columns:repeat(auto-fit,minmax(100px,400px)); gap: 2rem">
 
                 <?php
-
                 while ( $block_img = $result_img->fetch() ) {
                     echo <<<END
-            
-                <div class="img-item">
-                     <img class="image" id="img_link" src="$block_img[img_address]" style="width: 300px; ">
-                </div>
+                   
+                    <div class="img-item" style="background: url('$block_img[img_address]') center no-repeat;
+                    background-size:cover; height: 35rem">
+                    </div>               
 END;
                 }
                 ?>
             </div>
 
-            <div class="item-header"><h3> Репортаж </h3></div>
+            <div class="item-header">Репортаж </div>
 
             <?php
             $query_img = "SELECT `img_address` FROM `reportage`";
             $result_img = $pdo->query($query_img);
             //d( $result_img->fetchAll() );
             ?>
-            <div class="img_box" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px">
+            <div class="img_box" style="display: grid; grid-template-columns:repeat(auto-fit,minmax(100px,400px)); gap: 2rem">
 
                 <?php
                 while ( $block_img = $result_img->fetch() ) {
                     echo <<<END
-            
-                <div class="img-item">
-                     <img class="image" id="img_link" src="$block_img[img_address]" style="width: 300px; ">
-                </div>
+                
+                    <div class="img-item" style="background: url('$block_img[img_address]') center no-repeat;
+                    background-size:cover; height: 35rem">
+            </div> 
 END;
                 }
                 ?>
             </div>
 
-            <div class="item-header"><h3>Интерьер</h3></div>
+            <div class="item-header">Интерьер</div>
             <?php
             $query_img = "SELECT `img_address` FROM `interior`";
             $result_img = $pdo->query($query_img);
             //d( $result_img->fetchAll() );
             ?>
-            <div class="img_box" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px">
+             <div class="img_box" style="display: grid; grid-template-columns:repeat(auto-fit,minmax(100px,400px)); gap: 2rem">
 
                 <?php
-
                 while ( $block_img = $result_img->fetch() ) {
                     echo <<<END
-            
-                <div class="img-item">
-                     <img class="image" id="img_link" src="$block_img[img_address]" style="width: 300px; ">
-                </div>
+                
+                    <div class="img-item" style="background: url('$block_img[img_address]') center no-repeat;
+                    background-size:cover; height: 35rem">
+            </div> 
 END;
                 }
                 ?>
